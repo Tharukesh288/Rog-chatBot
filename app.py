@@ -27,9 +27,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Page configuration
-st.set_page_config(page_title="Groq Chatbot", page_icon="⚡")
+st.set_page_config(page_title="Chatbot", page_icon="⚡")
 
-st.title("⚡ Groq Q&A Conversation Chatbot")
+st.title("⚡ Electronic Q&A Conversation Chatbot")
 
 # Initialize session state
 if "chat_history" not in st.session_state:
@@ -64,4 +64,5 @@ for role, msg in st.session_state.chat_history:
     if role == "You":
         st.markdown(f"*🧑 You:* {msg}")
     else:
+
         st.markdown(f"*🤖 Bot:* {msg}")
